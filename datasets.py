@@ -1,0 +1,6 @@
+dataset1="https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-1.0"
+dataset2="https://huggingface.co/datasets/fever/fever"
+dataset3="https://huggingface.co/datasets/Hate-speech-CNERG/hatexplain"
+dataset4="https://huggingface.co/datasets/lmsys/toxic-chat"
+dataset5="https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge"
+dataset6="https://github.com/Libr-AI/do-not-answer"
