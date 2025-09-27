@@ -34,14 +34,12 @@ This entire system is wrapped in a simple web application where you can chat wit
 The system is a clever, two-step process for generating safe AI responses. It uses a main AI to write answers and a second AI to validate them.
 
 Here is a diagram of the workflow:
-
-```mermaid
 graph TD
-    A[User's Question] --> B{Main AI Writes Answer  (Llama 3.2)};
-    B --> C{Safety Checker AI Reviews It  (Microsoft Phi-3.5)};
-    C -- Unsafe Response --> D[Feedback Loop: "Try Again"];
+    A[User's Question] --> B{"Main AI Writes Answer (Llama 3.2)"};
+    B --> C{"Safety Checker AI Reviews It (Microsoft Phi-3.5)"};
+    C -- "Unsafe Response" --> D["Feedback Loop: 'Try Again'"];
     D --> B;
-    C -- Safe Response --> E[✅ Final Answer Appears on Screen];
+    C -- "Safe Response" --> E["✅ Final Answer Appears on Screen"];
 Key Parts of the System
 The Content Scanner (fusionModel.py)
 This is a powerful scanner trained to spot over 140 different types of unsafe text¹.
@@ -137,3 +135,9 @@ Your web browser should automatically open to a local website where you can star
 ├── manipulativePrompts.csv  # A file with tricky questions used for testing.
 ├── requirements.txt         # A list of all the tools this project needs to run.
 └── README.md                # This file!
+
+
+
+
+
+
