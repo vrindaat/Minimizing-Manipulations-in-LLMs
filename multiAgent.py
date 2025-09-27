@@ -3,7 +3,7 @@ import json
 from huggingface_hub import InferenceClient
 import yaml
 import dirtyjson
-client = InferenceClient(api_key="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")
+client = InferenceClient(api_key="ADD YOUR HF API KEY")
 
 
 class crewAI():
