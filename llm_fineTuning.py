@@ -9,7 +9,7 @@ from huggingface_hub import HfFolder
 
 print(torch.cuda.is_available())
 
-hf_token = "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"
+hf_token = "ADD YOUR HUGGINFFACE TOKEN ID"
 HfFolder.save_token(hf_token)
 
 # Load model directly
