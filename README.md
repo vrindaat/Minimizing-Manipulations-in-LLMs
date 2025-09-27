@@ -37,8 +37,8 @@ Here is a diagram of the workflow:
 
 ```mermaid
 graph TD
-    A[User's Question] --> B{Main AI Writes Answer <br> (Llama 3.2)};
-    B --> C{Safety Checker AI Reviews It <br> (Microsoft Phi-3.5)};
+    A[User's Question] --> B{Main AI Writes Answer  (Llama 3.2)};
+    B --> C{Safety Checker AI Reviews It  (Microsoft Phi-3.5)};
     C -- Unsafe Response --> D[Feedback Loop: "Try Again"];
     D --> B;
     C -- Safe Response --> E[✅ Final Answer Appears on Screen];
