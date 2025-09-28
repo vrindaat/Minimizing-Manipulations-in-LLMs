@@ -40,38 +40,39 @@ graph TD
     C -- "Unsafe Response" --> D["Feedback Loop: 'Try Again'"];
     D --> B;
     C -- "Safe Response" --> E["✅ Final Answer Appears on Screen"];
-Key Parts of the System
-The Content Scanner (fusionModel.py)
+    
+## Key Parts of the System
+1. **The Content Scanner** (fusionModel.py)
 This is a powerful scanner trained to spot over 140 different types of unsafe text¹.
 
-Technology: It combines the strengths of two advanced AI models (DeBERTa-v3 and RoBERTa) to be highly accurate².
+>**Technology**: It combines the strengths of two advanced AI models (**DeBERTa-v3** and **RoBERTa**) to be highly accurate².
 
-Training: It learned how to spot harmful content by studying the NVIDIA Aegis AI Content Safety Dataset³.
+>**Training**: It learned how to spot harmful content by studying the **NVIDIA Aegis AI Content Safety Dataset³**.
 
-The AI Safety Team (multiAgent.py)
+2. **The AI Safety Team** (multiAgent.py)
 This is the core of the system, where two AIs work together as a team.
 
-The Generator AI (Llama 3.2): A creative AI that's good at writing answers to your questions⁴.
+>**The Generator AI (Llama 3.2)**: A creative AI that's good at writing answers to your questions⁴.
 
-The Validator AI (Microsoft Phi-3.5): A fast, efficient AI that's excellent at spotting safety issues and giving a simple "safe" or "unsafe" verdict⁵.
+>**The Validator AI (Microsoft Phi-3.5)**: A fast, efficient AI that's excellent at spotting safety issues and giving a simple "safe" or "unsafe" verdict⁵.
 
-The Website Dashboard (main.py)
+3. **The Website Dashboard** (main.py)
 A simple and interactive web page built with Streamlit⁶.
 
-Chat Window: Lets you talk to the AI that is protected by the GuardianLLM system⁷.
+>**Chat Window**: Lets you talk to the AI that is protected by the GuardianLLM system⁷.
 
-Analysis Panels: Shows you in real-time what the Content Scanner found in your question and how many times the AI had to rewrite its own answer to make it safe⁸.
+>**Analysis Panels**: Shows you in real-time what the Content Scanner found in your question and how many times the AI had to rewrite its own answer to make it safe⁸.
 
-📊 Benchmark: Why This is Needed
+## Benchmark: Why This is Needed
 To prove that a system like this is necessary, we tested several major AI models (the code for these tests is in llm_fineTuning.py⁹). The results clearly show that even the biggest and most expensive models can be tricked.
 
-High Jailbreak Rates: We found that top-tier models could be jailbroken over 90% of the time¹⁰.
+>**High Jailbreak Rates**: We found that top-tier models could be jailbroken over 90% of the time¹⁰.
 
-Toxicity and Stereotypes: Many models scored poorly on generating toxic language and relying on harmful stereotypes¹¹.
+>**Toxicity and Stereotypes**: Many models scored poorly on generating toxic language and relying on harmful stereotypes¹¹.
 
 These results prove that AI models need a strong guardian system like this one to ensure they remain safe and helpful.
 
-🚀 Getting Started: Setup Guide
+## Getting Started: Setup Guide
 Ready to run this project on your own computer? Follow these steps.
 
 1. You Will Need:
