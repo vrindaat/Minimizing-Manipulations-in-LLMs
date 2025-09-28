@@ -45,69 +45,69 @@ graph TD
 1. **The Content Scanner** (fusionModel.py)
 This is a powerful scanner trained to spot over 140 different types of unsafe text¹.
 
->**Technology**: It combines the strengths of two advanced AI models (**DeBERTa-v3** and **RoBERTa**) to be highly accurate².
+-**Technology**: It combines the strengths of two advanced AI models (**DeBERTa-v3** and **RoBERTa**) to be highly accurate².
 
->**Training**: It learned how to spot harmful content by studying the **NVIDIA Aegis AI Content Safety Dataset³**.
+-**Training**: It learned how to spot harmful content by studying the **NVIDIA Aegis AI Content Safety Dataset³**.
 
 2. **The AI Safety Team** (multiAgent.py)
 This is the core of the system, where two AIs work together as a team.
 
->**The Generator AI (Llama 3.2)**: A creative AI that's good at writing answers to your questions⁴.
+-**The Generator AI (Llama 3.2)**: A creative AI that's good at writing answers to your questions⁴.
 
->**The Validator AI (Microsoft Phi-3.5)**: A fast, efficient AI that's excellent at spotting safety issues and giving a simple "safe" or "unsafe" verdict⁵.
+-**The Validator AI (Microsoft Phi-3.5)**: A fast, efficient AI that's excellent at spotting safety issues and giving a simple "safe" or "unsafe" verdict⁵.
 
 3. **The Website Dashboard** (main.py)
 A simple and interactive web page built with Streamlit⁶.
 
->**Chat Window**: Lets you talk to the AI that is protected by the GuardianLLM system⁷.
+-**Chat Window**: Lets you talk to the AI that is protected by the GuardianLLM system⁷.
 
->**Analysis Panels**: Shows you in real-time what the Content Scanner found in your question and how many times the AI had to rewrite its own answer to make it safe⁸.
+-**Analysis Panels**: Shows you in real-time what the Content Scanner found in your question and how many times the AI had to rewrite its own answer to make it safe⁸.
 
 ## Benchmark: Why This is Needed
 To prove that a system like this is necessary, we tested several major AI models (the code for these tests is in llm_fineTuning.py⁹). The results clearly show that even the biggest and most expensive models can be tricked.
 
->**High Jailbreak Rates**: We found that top-tier models could be jailbroken over 90% of the time¹⁰.
+-**High Jailbreak Rates**: We found that top-tier models could be jailbroken over 90% of the time¹⁰.
 
->**Toxicity and Stereotypes**: Many models scored poorly on generating toxic language and relying on harmful stereotypes¹¹.
+-**Toxicity and Stereotypes**: Many models scored poorly on generating toxic language and relying on harmful stereotypes¹¹.
 
 These results prove that AI models need a strong guardian system like this one to ensure they remain safe and helpful.
 
 ## Getting Started: Setup Guide
 Ready to run this project on your own computer? Follow these steps.
 
-1. You Will Need:
+1. **You Will Need**:
 
 Python 3.8+
 
 Git for version control
 
-2. Copy the Project (Clone)
+2. **Copy the Project (Clone)**
 Open your computer's terminal and run this command:
 
-Bash
+`Bash`
 
-git clone <your-repository-url>
-cd <repository-name>
-3. Create a Clean Workspace (Virtual Environment)
+`git clone <your-repository-url>`
+`cd <repository-name>`
+3. **Create a Clean Workspace (Virtual Environment)**
 This creates a separate space for the project so it doesn't interfere with other Python programs on your computer.
 
 Bash
 
 # For Mac/Linux
-python3 -m venv venv
-source venv/bin/activate
+`python3 -m venv venv`
+`source venv/bin/activate`
 
 # For Windows
-python -m venv venv
-.\venv\Scripts\activate
-4. Install All Required Packages
+`python -m venv venv`
+`.\venv\Scripts\activate`
+4. **Install All Required Packages**
 This command installs all the tools the project needs from the requirements.txt file¹².
 
 Bash
 
-pip install -r requirements.txt
-5. Add Your API Key
-The system needs a free API key from Hugging Face to work. Open the multiAgent.py file¹³. It's best practice to load your key from an environment variable. However, for a quick start, you can find the line client = InferenceClient(api_key="hf_...") and replace the hf_... part with your own key¹⁴.
+`pip install -r requirements.txt`
+5. **Add Your API **
+The system needs a free API key from Hugging Face to work. Open the multiAgent.py file¹³. It's best practice to load your key from an environment variable. However, for a quick start, you can find the line >client = InferenceClient(api_key="hf_...") and replace the hf_... part with your own key¹⁴.
 
 ⚡ How to Use the App
 1. Prepare the Test Questions
@@ -115,16 +115,16 @@ Run this command to create the manipulativePrompts.csv file¹⁵, which the app 
 
 Bash
 
-python prompts.py
+`python prompts.py`
 2. Launch the Website
 Run this command to start the Streamlit web application¹⁶.
 
 Bash
 
-streamlit run main.py
+`streamlit run main.py`
 Your web browser should automatically open to a local website where you can start chatting!
 
-📁 Project Files Explained
+## Project Files Explained
 .
 ├── fusionModel.py           # Code to train the AI that scans for unsafe content.
 ├── guardLLM.py              # Code that uses the trained scanner on new text.
