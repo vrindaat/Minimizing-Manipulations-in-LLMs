@@ -35,12 +35,14 @@ The system is a clever, two-step process for generating safe AI responses. It us
 
 Here is a diagram of the workflow:
 
+```mermaid
 graph TD
     A[User's Question] --> B{"Main AI Writes Answer (Llama 3.2)"};
     B --> C{"Safety Checker AI Reviews It (Microsoft Phi-3.5)"};
     C -- "Unsafe Response" --> D["Feedback Loop: 'Try Again'"];
     D --> B;
     C -- "Safe Response" --> E["✅ Final Answer Appears on Screen"];
+```
     
 
 ---
@@ -85,9 +87,8 @@ This proves the critical need for a guardian system like GuardianLLM.
 
 Open your computer's terminal and run this command:
 
+
 ```
-Bash
----
 git clone <your-repository-url>
 cd <repository-name>
 ```
@@ -96,8 +97,6 @@ cd <repository-name>
 This creates a separate space for the project so it doesn't interfere with other Python programs on your computer.
 
 ```
-Bash
----
 # For Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
@@ -111,8 +110,6 @@ python -m venv venv
 This command installs all the tools the project needs from the requirements.txt file¹².
 
 ```
-Bash
----
 pip install -r requirements.txt
 ```
 
@@ -124,8 +121,6 @@ The system needs a free API key from Hugging Face to work. Open the multiAgent.p
 Run this command to create the manipulativePrompts.csv file¹⁵, which the app uses on the "Prompt Analysis" page.
 
 ```
-Bash
----
 python prompts.py
 ```
 
@@ -133,23 +128,31 @@ python prompts.py
 Run this command to start the Streamlit web application¹⁶.
 
 ```
-Bash
----
 streamlit run main.py
 ```
 Your web browser should automatically open to a local website where you can start chatting!
 
 ## Project Files Explained
 .
+
 ├── fusionModel.py           # Code to train the AI that scans for unsafe content.
+
 ├── guardLLM.py              # Code that uses the trained scanner on new text.
+
 ├── llm_fineTuning.py        # Code for testing and fine-tuning various AIs.
+
 ├── main.py                  # The code for the main website dashboard.
+
 ├── multiAgent.py            # Code for the two AIs (Generator & Validator) that work together.
+
 ├── prompts.py               # Script that creates the list of tricky test questions.
+
 ├── labels.py                # A list of all 146 unsafe categories the scanner looks for.
+
 ├── manipulativePrompts.csv  # A file with tricky questions used for testing.
+
 ├── requirements.txt         # A list of all the tools this project needs to run.
+
 └── README.md                # This file!
 
 
