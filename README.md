@@ -7,14 +7,14 @@ This project is a smart safety system for AI chatbots. Its main job is to act li
 ---
 
 ##  Table of Contents
-1.  [The Problem](#-the-problem)
-2.  [Our Solution](#-our-solution)
-3.  [How It Works](#-how-it-works)
-4.  [Key Parts of the System](#-key-parts-of-the-system)
-5.  [Benchmark: Why This is Needed](#-benchmark-why-this-is-needed)
-6.  [Getting Started: Setup Guide](#-getting-started-setup-guide)
-7.  [How to Use the App](#-how-to-use-the-app)
-8.  [Project Files Explained](#-project-files-explained)
+1.  [The Problem](#the-problem)
+2.  [Our Solution](#our-solution)
+3.  [How It Works](#how-it-works)
+4.  [Key Parts of the System](#key-parts-of-the-system)
+5.  [Benchmark: Why This is Needed](#benchmark-why-this-is-needed)
+6.  [Getting Started: Setup Guide](#getting-started-setup-guide)
+7.  [How to Use the App](#how-to-use-the-app)
+8.  [Project Files Explained](#project-files-explained)
 
 ## The Problem
 
