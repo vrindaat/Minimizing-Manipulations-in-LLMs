@@ -85,15 +85,18 @@ This proves the critical need for a guardian system like GuardianLLM.
 
 Open your computer's terminal and run this command:
 
-```Bash
+```
+Bash
 ---
 git clone <your-repository-url>
-cd <repository-name>```
+cd <repository-name>
+```
 
 ### 3. Create a Clean Workspace (Virtual Environment)
 This creates a separate space for the project so it doesn't interfere with other Python programs on your computer.
 
-```Bash
+```
+Bash
 ---
 # For Mac/Linux
 python3 -m venv venv
@@ -101,14 +104,17 @@ source venv/bin/activate
 
 # For Windows
 python -m venv venv
-.\venv\Scripts\activate```
+.\venv\Scripts\activate
+```
 
 ### 4. Install All Required Packages
 This command installs all the tools the project needs from the requirements.txt file¹².
 
-```Bash
+```
+Bash
 ---
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 ### 5. Add Your API
 The system needs a free API key from Hugging Face to work. Open the multiAgent.py file¹³. It's best practice to load your key from an environment variable. However, for a quick start, you can find the line `client = InferenceClient(api_key="hf_...")` and replace the `hf_...` part with your own key¹⁴.
@@ -117,16 +123,20 @@ The system needs a free API key from Hugging Face to work. Open the multiAgent.p
 1. **Prepare the Test Questions**
 Run this command to create the manipulativePrompts.csv file¹⁵, which the app uses on the "Prompt Analysis" page.
 
-```Bash
+```
+Bash
 ---
-python prompts.py```
+python prompts.py
+```
 
 2. **Launch the Website**
 Run this command to start the Streamlit web application¹⁶.
 
-```Bash
+```
+Bash
 ---
-streamlit run main.py```
+streamlit run main.py
+```
 Your web browser should automatically open to a local website where you can start chatting!
 
 ## Project Files Explained
