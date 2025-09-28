@@ -1,4 +1,4 @@
-# Minimizing-Manipulations-in-LLMs
+# Minimizing Manipulations in LLMs
 
 This project is a smart safety system for AI chatbots. Its main job is to act like a "guardian," stopping the AI from writing harmful, toxic, or inappropriate responses.
 > ### ⚠️ Content Warning
@@ -6,7 +6,7 @@ This project is a smart safety system for AI chatbots. Its main job is to act li
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 1.  [The Problem](#-the-problem)
 2.  [Our Solution](#-our-solution)
 3.  [How It Works](#-how-it-works)
@@ -16,20 +16,20 @@ This project is a smart safety system for AI chatbots. Its main job is to act li
 7.  [How to Use the App](#-how-to-use-the-app)
 8.  [Project Files Explained](#-project-files-explained)
 
-## 🎯 The Problem
+## The Problem
 
 As AI chatbots become more common, we need to ensure they are safe. A big challenge is that people can sometimes trick these AIs into saying bad things—a practice called "jailbreaking." Our research and testing show that even the most advanced AIs can be vulnerable to these tricks, highlighting the need for an extra layer of security.
 
-## ✅ Our Solution
+## Our Solution
 
-GuardianLLM is a complete safety net that tackles this problem from two angles:
+Our LLM is a complete safety net that tackles this problem from two angles:
 
 1.  **Proactive Scanning:** It first checks the user's question with a custom-built "Content Scanner" to see if it's asking for something dangerous *before* the AI even replies.
 2.  **Reactive Guardrails:** After the AI writes an answer, a second "Safety Checker" AI double-checks it. If it finds anything unsafe, it tells the first AI to scrap the answer and write a new, safer one.
 
 This entire system is wrapped in a simple web application where you can chat with the protected AI and see the safety features in action.
 
-## ⚙️ How It Works
+## How It Works
 
 The system is a clever, two-step process for generating safe AI responses. It uses a main AI to write answers and a second AI to validate them.
 
@@ -43,8 +43,6 @@ graph TD
     D --> B;
     C -- "Safe Response" --> E["✅ Final Answer Appears on Screen"];
 ```
-    
-
 ---
 
 ## Key Parts of the System
@@ -66,7 +64,7 @@ graph TD
 
 ---
 
-## 📊 Benchmark: Why This is Needed
+## Benchmark: Why This is Needed
 
 Testing revealed serious flaws in advanced AI models:
 
@@ -77,7 +75,7 @@ This proves the critical need for a guardian system like GuardianLLM.
 
 ---
 
-##  Getting Started: Setup Guide
+## Getting Started: Setup Guide
 
 ### 1. Requirements
 - Python 3.8+  
@@ -85,7 +83,7 @@ This proves the critical need for a guardian system like GuardianLLM.
 
 ### 2. Clone the Project
 
-Open your computer's terminal and run this command:
+Open your Git Bash on your computer and run this command:
 
 
 ```
@@ -100,7 +98,8 @@ This creates a separate space for the project so it doesn't interfere with other
 # For Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
-
+```
+```
 # For Windows
 python -m venv venv
 .\venv\Scripts\activate
